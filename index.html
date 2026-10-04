@@ -4,23 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Татьяна Бурдюгова · спикер: ИИ и управление в реальном бизнесе</title>
-<meta name="description" content="Татьяна Бурдюгова: спикер и практик. Как ИИ и цифровизация приживаются в большом сервисном бизнесе. Строит системы с 2009 года. Выступления, лекции, комментарии для СМИ.">
+<meta name="description" content="Татьяна Бурдюгова: спикер и практик. Как ИИ и цифровизация приживаются в большом сервисном бизнесе. Выступления, лекции, комментарии для СМИ.">
 <meta property="og:title" content="Татьяна Бурдюгова · ИИ и управление в реальном бизнесе">
-<meta property="og:description" content="Спикер и практик: как ИИ приживается в реальной работе большой компании. Выступления, лекции, комментарии для СМИ.">
-<meta property="og:image" content="https://tatyanaburdyugova.com/img/hero.jpg">
+<meta property="og:description" content="Спикер и практик: как ИИ приживается в реальной работе большой компании.">
+<meta property="og:image" content="https://tatyanaburdyugova.com/img/hero_stage.jpg">
 <meta property="og:url" content="https://tatyanaburdyugova.com/">
 <meta property="og:type" content="profile">
 <link rel="canonical" href="https://tatyanaburdyugova.com/">
-<meta name="theme-color" content="#26232A">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2326232A'/%3E%3Cpath d='M16 44h26v4c0 6-5 8-13 8s-13-2-13-8z' fill='none' stroke='%23E3D0B4' stroke-width='3'/%3E%3Cpath d='M22 40c0-8 5-8 7-14s7-7 9-4 5-9 12-14' fill='none' stroke='%23E0A673' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="fonts3/fonts.css">
+<meta name="theme-color" content="#F3F3F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23D81F2A'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='%23fff'%3EТБ%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="img/hero_stage.jpg" as="image">
+<link rel="stylesheet" href="fonts4/fonts.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Татьяна Бурдюгова",
   "url": "https://tatyanaburdyugova.com/",
-  "image": "https://tatyanaburdyugova.com/img/hero.jpg",
+  "image": "https://tatyanaburdyugova.com/img/hero_stage.jpg",
   "description": "Спикер и практик: внедрение ИИ и цифровизация в сервисном бизнесе. Строит системы в бизнесе с 2009 года.",
   "knowsAbout": ["искусственный интеллект в бизнесе", "цифровизация", "бизнес-процессы", "управленческий учёт", "стратегия"],
   "alumniOf": ["МГУ имени М. В. Ломоносова (MBA)"],
@@ -28,424 +30,260 @@
 }
 </script>
 <style>
+  /* Направление «Сцена»: красный костюм со сцены + чёрный + холодный светлый. Углы острые везде. */
   :root{
-    --cream:#F4EFE9; --paper:#FBF8F4; --graphite:#26232A; --graphite2:#302C35;
-    --lilac:#B39AAE; --lavmilk:#EAE2E8; --copper:#B5704A; --caramel:#E0A673;
-    --mocha:#7A5A4C; --foam:#E3D0B4;
-    --r-xl:40px; --r-l:30px; --r-m:22px;
-    --wrap:min(1240px, 100% - 32px);
-    --ease:cubic-bezier(.2,.7,.2,1);
+    --paper:#F3F3F1; --paper2:#E9E9E6; --ink:#141416; --muted:#5F5F65; --rule:#D3D3CF;
+    --red:#D81F2A; --red-ink:#B5141E; --on-red:#FFFFFF;
+    --night:#111113; --night-text:#EDEDEA; --night-muted:#9C9CA2;
+    --wrap:min(1280px, 100% - 40px);
+    --ease:cubic-bezier(.16,1,.3,1);
+    --display:'Unbounded',system-ui,sans-serif; --text:'Golos Text',system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --paper:#121214; --paper2:#1B1B1E; --ink:#EDEDEA; --muted:#A3A3A9; --rule:#2C2C30; --red:#E3303B; --red-ink:#FF5560; }
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{font-family:'Onest',system-ui,sans-serif;background:var(--cream);color:var(--graphite);line-height:1.6;overflow-x:hidden}
-  body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.06;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-  a{color:inherit}
-  img{display:block;max-width:100%;height:auto}
-  ::selection{background:var(--lavmilk)}
-  :focus-visible{outline:2px solid var(--caramel);outline-offset:3px;border-radius:6px}
-  .wrap{width:var(--wrap);margin:0 auto}
-  .it{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500}
-  .mono{font-family:'JetBrains Mono',monospace;font-weight:500}
-  .eyebrow{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--copper)}
-  .on-dark .eyebrow{color:var(--lilac)}
-
-  .pill{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:500;font-size:15.5px;text-decoration:none;transition:transform .3s var(--ease),background .3s,color .3s;border:1px solid transparent;white-space:nowrap}
-  .pill:hover{transform:translateY(-2px)}
-  .pill.car{background:var(--caramel);color:var(--graphite)}
-  .pill.car:hover{background:#ECB887}
-  .pill.gr{background:var(--graphite);color:var(--cream)}
-  .pill.gr:hover{background:#3A3540}
-  .pill.ol{border-color:rgba(179,154,174,.6);color:var(--cream)}
-  .pill.ol:hover{background:rgba(179,154,174,.15)}
-  .arr{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(38,35,42,.12);font-size:14px;transition:transform .3s var(--ease),background .3s}
-  .pill:hover .arr{transform:translateX(3px) rotate(-45deg)}
-  .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-family:'JetBrains Mono';font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-  .chip.l{background:rgba(179,154,174,.16);color:var(--lavmilk);border:1px solid rgba(179,154,174,.3)}
-  .chip.d{background:var(--paper);color:var(--mocha);border:1px solid rgba(38,35,42,.1)}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--caramel);box-shadow:0 0 0 0 rgba(224,166,115,.7);animation:pulse 2.2s infinite}
-  @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(224,166,115,0)}100%{box-shadow:0 0 0 0 rgba(224,166,115,0)}}
-
-  .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;width:min(1120px, 100% - 24px);
-    display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 8px 8px 12px;border-radius:999px;
-    background:rgba(244,239,233,.72);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);
-    border:1px solid rgba(179,154,174,.35)}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-  .mono-mark{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--lilac);display:grid;place-items:center;font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-size:19px;color:var(--copper)}
-  .brand b{font-weight:600;font-size:15px;letter-spacing:-.01em}
-  .nav ul{display:flex;gap:4px;list-style:none}
-  .nav ul a{display:block;padding:9px 14px;border-radius:999px;text-decoration:none;font-size:14.5px;color:var(--mocha);transition:background .25s,color .25s}
-  .nav ul a:hover{background:var(--lavmilk);color:var(--graphite)}
-  .nav .pill{padding:11px 20px;font-size:14px}
-  @media (max-width:900px){.nav ul{display:none}}
-  @media (max-width:420px){.brand b{display:none}}
-
-  .aura{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;pointer-events:none}
-
-  .hero{position:relative;padding:104px 0 28px;overflow:hidden}
   html,body{overflow-x:clip}
-  .hero .aura.a1{width:520px;height:520px;background:var(--lilac);top:-120px;left:-140px}
-  .hero .aura.a2{width:420px;height:420px;background:var(--caramel);top:240px;right:-120px;opacity:.35}
-  .bento{position:relative;display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-  .tile{border-radius:var(--r-l);overflow:hidden;position:relative}
-  .t-hero{grid-column:span 7;grid-row:span 2;background:var(--graphite);color:var(--cream);padding:46px 48px 44px;display:flex;flex-direction:column;justify-content:space-between;min-height:600px;
-    background-image:linear-gradient(rgba(179,154,174,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(179,154,174,.09) 1px,transparent 1px);background-size:44px 44px}
-  .t-hero .chips{display:flex;gap:8px;flex-wrap:wrap}
-  .t-hero h1{font-family:'Cormorant Garamond';font-weight:500;font-size:clamp(64px,8.6vw,124px);line-height:.88;letter-spacing:-.025em;margin:34px 0 26px}
-  .t-hero h1 .it{color:var(--caramel);display:block}
-  .t-hero .lead{font-size:clamp(17px,1.5vw,19.5px);line-height:1.6;color:var(--foam);max-width:560px}
-  .t-hero .lead b{color:var(--cream);font-weight:500}
-  .t-hero .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
-  .t-hero .steam{position:absolute;right:30px;top:38px;width:170px;opacity:.9}
-  .t-photo{grid-column:span 5;grid-row:span 2;min-height:600px;background:var(--graphite2)}
-  .t-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform 1.2s var(--ease)}
-  .t-photo:hover img{transform:scale(1.03)}
-  .glass{position:absolute;left:16px;right:16px;bottom:16px;padding:18px 20px;border-radius:var(--r-m);
-    background:rgba(38,35,42,.42);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(244,239,233,.18);color:var(--cream);display:flex;justify-content:space-between;align-items:center;gap:14px}
-  .glass .it{font-size:24px;line-height:1.1}
-  .glass small{font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--foam);text-align:right}
-  .t-fact{grid-column:span 3;background:var(--paper);border:1px solid rgba(38,35,42,.07);padding:26px 26px 28px;transition:transform .35s var(--ease),box-shadow .35s}
-  .t-fact:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(38,35,42,.35)}
-  .t-fact .n{font-family:'JetBrains Mono';font-weight:500;font-size:clamp(38px,3.6vw,52px);line-height:1;letter-spacing:-.04em}
-  .t-fact .n span{font-size:.45em;color:var(--mocha);letter-spacing:0;margin-left:6px}
-  .t-fact p{margin-top:12px;font-size:14.5px;line-height:1.45;color:var(--mocha)}
-  .t-fact.lv{background:var(--lavmilk);border-color:transparent}
-  .t-next{grid-column:span 8;background:var(--lavmilk);padding:30px 34px;display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center}
-  .t-next .date{font-family:'JetBrains Mono';font-weight:500;font-size:64px;line-height:.9;letter-spacing:-.05em;color:var(--copper)}
-  .t-next .date small{display:block;font-size:12px;letter-spacing:.18em;color:var(--mocha);margin-top:10px}
-  .t-next h3{font-family:'Cormorant Garamond';font-weight:500;font-size:clamp(24px,2.3vw,31px);line-height:1.1;margin:10px 0 8px}
-  .t-next p{font-size:14.5px;color:var(--mocha)}
-  .t-next p b{font-family:'JetBrains Mono';color:var(--copper);font-weight:500}
-  .t-test{grid-column:span 4;background:var(--copper);color:var(--cream);padding:30px 32px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:18px;transition:transform .35s var(--ease)}
-  .t-test:hover{transform:translateY(-4px)}
-  .t-test .eyebrow{color:var(--foam)}
-  .t-test h3{font-family:'Cormorant Garamond';font-weight:500;font-size:32px;line-height:1.02}
-  .t-test .go{display:flex;justify-content:space-between;align-items:center;font-size:14.5px;font-weight:500}
-  .t-test .arr{background:rgba(244,239,233,.2);width:42px;height:42px;font-size:17px}
-  .t-test:hover .arr{transform:rotate(-45deg)}
-  @media (max-width:980px){
-    .t-hero,.t-photo{grid-column:span 12;min-height:auto}
-    .t-photo{height:560px}
-    .t-fact{grid-column:span 6}
-    .t-next,.t-test{grid-column:span 12}
-    .t-hero .steam{width:120px;opacity:.45}
-  }
-  @media (max-width:560px){
-    .t-hero{padding:34px 24px}
-    .t-next{grid-template-columns:1fr;gap:14px}
-    .t-photo{height:480px}
-    .t-fact{padding:22px 20px}
-    .t-hero .steam{display:none}
+  body{font-family:var(--text);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+  :focus-visible{outline:3px solid var(--red);outline-offset:3px}
+  .wrap{width:var(--wrap);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.05}
+  h2{font-size:clamp(34px,4.4vw,60px);max-width:16ch}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--red);color:var(--on-red);padding:19px 34px;font-weight:600;font-size:16.5px;white-space:nowrap;transition:background .25s,transform .15s}
+  .btn:hover{background:var(--red-ink)}
+  .btn:active{transform:translateY(1px)}
+  .lnk{font-weight:500;border-bottom:2px solid currentColor;padding-bottom:3px;transition:color .2s}
+  .lnk:hover{color:var(--red)}
+
+  .top{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .top .nm{font-weight:600;font-size:15.5px}
+  .top nav{display:flex;gap:30px;font-size:15px;color:var(--muted)}
+  .top nav a:hover{color:var(--ink)}
+  .top .btn{padding:12px 22px;font-size:15px}
+  @media (max-width:860px){.top nav{display:none}}
+
+  .hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);min-height:calc(100dvh - 72px);max-height:960px}
+  .hero .l{padding:4vh 40px 40px max(20px, calc((100vw - 1280px)/2));display:flex;flex-direction:column}
+  .hero h1{font-weight:800;font-size:clamp(40px,5.8vw,96px);line-height:.98;letter-spacing:-.04em;text-transform:uppercase;margin-top:auto}
+  .hero h1 span{color:var(--red);display:block}
+  .hero .sub{font-size:clamp(18px,1.5vw,22px);line-height:1.45;max-width:30ch;margin-top:30px}
+  .hero .cta{display:flex;gap:28px;align-items:center;margin-top:34px;flex-wrap:wrap}
+  .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(24px,4vw,64px);margin-top:auto;padding-top:22px;border-top:2px solid var(--ink)}
+  .facts b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(22px,2.2vw,32px);letter-spacing:-.03em;line-height:1.1}
+  .facts span{font-size:14px;color:var(--muted)}
+  .hero .r{position:relative;overflow:hidden;background:#1b2b4b}
+  .hero .r img{width:100%;height:100%;object-fit:cover;object-position:58% 30%}
+  @media (max-width:960px){
+    .hero{grid-template-columns:1fr;max-height:none}
+    .hero .r{order:-1;height:62vh}
+    .hero .l{padding:36px 20px 40px}
+    .hero h1{margin-top:0}
+    .facts{grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:40px}
   }
 
-  .marq{overflow:hidden;padding:26px 0 8px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-  .marq .track{display:flex;gap:12px;width:max-content;animation:run 40s linear infinite}
-  .marq span{padding:12px 22px;border-radius:999px;border:1px solid rgba(38,35,42,.14);font-family:'JetBrains Mono';font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mocha);white-space:nowrap;background:var(--paper)}
-  .marq span.hl{background:var(--graphite);color:var(--cream);border-color:var(--graphite)}
-  @keyframes run{to{transform:translateX(-50%)}}
+  section{padding:clamp(80px,10vw,140px) 0}
 
-  section{padding:110px 0}
-  .shead{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end;margin-bottom:46px}
-  .shead h2{font-family:'Cormorant Garamond';font-weight:500;font-size:clamp(46px,6vw,84px);line-height:.95;letter-spacing:-.02em;margin-top:16px}
-  .shead h2 .it{color:var(--copper)}
-  .on-dark .shead h2 .it{color:var(--caramel)}
-  .shead p{font-size:16.5px;color:var(--mocha)}
-  .on-dark .shead p{color:var(--foam)}
-  @media (max-width:860px){.shead{grid-template-columns:1fr;gap:16px} section{padding:76px 0}}
+  .topics{margin-top:56px}
+  .topic{display:grid;grid-template-columns:5fr 6fr;gap:40px;padding:34px 0 40px;border-top:2px solid var(--ink)}
+  .topic h3{font-size:clamp(26px,2.6vw,38px);transition:color .25s}
+  .topic p{color:var(--muted);max-width:52ch;font-size:18px}
+  .topic:hover h3{color:var(--red)}
+  .formats{margin-top:20px;color:var(--muted);font-size:15.5px}
+  .formats b{color:var(--ink);font-weight:500}
+  @media (max-width:800px){.topic{grid-template-columns:1fr;gap:12px}}
 
-  .topics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .topic{background:var(--paper);border:1px solid rgba(38,35,42,.07);border-radius:var(--r-l);padding:34px 32px;min-height:360px;display:flex;flex-direction:column;transition:transform .4s var(--ease),background .4s,color .4s}
-  .topic:hover{transform:translateY(-6px);background:var(--graphite);color:var(--cream)}
-  .topic:hover p{color:var(--foam)}
-  .topic:hover .num{color:var(--caramel);border-color:rgba(224,166,115,.5)}
-  .topic .num{align-self:flex-start;font-family:'JetBrains Mono';font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid rgba(181,112,74,.45);color:var(--copper);transition:all .4s}
-  .topic h3{font-family:'Cormorant Garamond';font-weight:500;font-size:36px;line-height:1.02;margin:auto 0 14px;padding-top:60px}
-  .topic p{font-size:15.5px;line-height:1.65;color:var(--mocha);transition:color .4s}
-  .formats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-  @media (max-width:900px){.topics{grid-template-columns:1fr}.topic{min-height:0}}
+  .redblock{background:var(--red);color:var(--on-red)}
+  .stage{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:start;margin-top:56px}
+  .tl{list-style:none}
+  .tl li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:22px 0;border-top:1px solid rgba(255,255,255,.4)}
+  .tl li:first-child{border-top:2px solid #fff}
+  .tl .when{font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:-.01em;padding-top:4px}
+  .tl h3{font-size:24px;margin-bottom:6px}
+  .tl p{font-size:15.5px;opacity:.9}
+  .shots{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
+  .shots figure{display:flex;flex-direction:column;gap:8px}
+  .shots figure:first-child{grid-row:span 2}
+  .shots .ph{overflow:hidden;flex:1;min-height:0}
+  .shots img{width:100%;height:100%;object-fit:cover}
+  .shots figure:first-child .ph{aspect-ratio:3/4.4}
+  .shots figure:not(:first-child) .ph{aspect-ratio:4/3.2}
+  .shots figcaption{font-size:13.5px;opacity:.88}
+  @media (max-width:900px){.stage{grid-template-columns:1fr}.tl li{grid-template-columns:1fr;gap:4px}}
 
-  .panel{background:var(--graphite);color:var(--cream);border-radius:var(--r-xl);padding:84px clamp(22px,5vw,72px);position:relative;overflow:hidden;
-    background-image:linear-gradient(rgba(179,154,174,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(179,154,174,.08) 1px,transparent 1px);background-size:48px 48px}
-  .panel .aura{width:460px;height:460px;background:var(--lilac);opacity:.25;right:-160px;top:-160px}
+  .about{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(40px,6vw,96px);align-items:center}
+  .about .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%}
+  .about blockquote{font-family:var(--display);font-weight:500;font-size:clamp(24px,2.5vw,34px);line-height:1.25;letter-spacing:-.02em;margin-bottom:32px}
+  .about blockquote span{color:var(--red)}
+  .about p{color:var(--muted);margin-bottom:16px;max-width:60ch}
+  .about p b{color:var(--ink);font-weight:500}
+  .about .off{margin-top:26px;font-size:15.5px}
+  @media (max-width:900px){.about{grid-template-columns:1fr}.about .ph{max-width:420px}}
 
-  .stage{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;position:relative}
-  .stage .ph{border-radius:var(--r-l);overflow:hidden}
-  .stage .ph img{width:100%}
-  .tl{list-style:none;position:relative}
-  .tl li{position:relative;padding:0 0 30px 40px;border-left:1px solid rgba(179,154,174,.35);margin-left:7px}
-  .tl li:last-child{border-left-color:transparent;padding-bottom:0}
-  .tl li::before{content:'';position:absolute;left:-8px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--graphite);border:2px solid var(--lilac)}
-  .tl li.soon::before{background:var(--caramel);border-color:var(--caramel);box-shadow:0 0 0 6px rgba(224,166,115,.18)}
-  .tl .when{font-family:'JetBrains Mono';font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lilac)}
-  .tl .soon .when{color:var(--caramel)}
-  .tl h3{font-family:'Cormorant Garamond';font-weight:500;font-size:30px;line-height:1.1;margin:6px 0}
-  .tl p{font-size:15px;color:var(--foam)}
-  @media (max-width:900px){.stage{grid-template-columns:1fr;gap:40px}}
+  .news{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(28px,4vw,56px);margin-top:56px}
+  .feat .ph{overflow:hidden;aspect-ratio:16/10}
+  .feat .ph img{width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform .8s var(--ease)}
+  .feat:hover img{transform:scale(1.03)}
+  .meta{font-size:14px;color:var(--muted);margin:18px 0 8px}
+  .feat h3{font-size:clamp(24px,2.4vw,34px);transition:color .25s}
+  .feat p{color:var(--muted);margin-top:10px;max-width:56ch}
+  .side{display:flex;flex-direction:column}
+  .side a{padding:26px 0;border-top:2px solid var(--ink)}
+  .side .meta{margin-top:0}
+  .side h3{font-size:22px;transition:color .25s}
+  .side p{color:var(--muted);font-size:15.5px;margin-top:8px}
+  .side a:hover h3,.feat:hover h3{color:var(--red)}
+  @media (max-width:900px){.news{grid-template-columns:1fr}}
 
-  .news{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .card{background:var(--paper);border:1px solid rgba(38,35,42,.07);border-radius:var(--r-l);padding:30px;text-decoration:none;display:flex;flex-direction:column;min-height:300px;transition:transform .4s var(--ease),box-shadow .4s}
-  .card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(38,35,42,.45)}
-  .card .meta{display:flex;justify-content:space-between;align-items:center}
-  .card .meta .mono{font-size:12.5px;color:var(--mocha);letter-spacing:.08em}
-  .card h3{font-family:'Cormorant Garamond';font-weight:500;font-size:30px;line-height:1.05;margin:auto 0 12px;padding-top:44px}
-  .card p{font-size:15px;color:var(--mocha)}
-  .card .go{margin-top:20px;display:flex;justify-content:space-between;align-items:center;font-weight:500;font-size:14.5px}
-  .card:hover .arr{transform:rotate(-45deg);background:var(--caramel)}
-  @media (max-width:900px){.news{grid-template-columns:1fr}.card{min-height:0}}
+  .tests{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:56px}
+  .test{padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;min-height:320px;transition:transform .3s var(--ease)}
+  .test:hover{transform:translateY(-3px)}
+  .test.a{background:var(--ink);color:var(--paper)}
+  .test.b{border:2px solid var(--ink)}
+  .test h3{font-size:clamp(26px,2.6vw,36px);margin-bottom:14px}
+  .test p{opacity:.8;max-width:42ch}
+  .test .go{margin-top:auto;padding-top:28px;font-weight:600}
+  .test .go span{color:var(--red)}
+  .test.a .go span{color:#FF4C55}
+  @media (max-width:800px){.tests{grid-template-columns:1fr}}
 
-  .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
-  .about .ph{border-radius:var(--r-xl);overflow:hidden}
-  .about .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%}
-  .about blockquote{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:clamp(30px,3.3vw,44px);line-height:1.12;margin:16px 0 30px}
-  .about blockquote span{color:var(--copper)}
-  .about p{font-size:17px;line-height:1.75;color:var(--mocha);margin-bottom:18px}
-  .about p b{color:var(--graphite);font-weight:500}
-  .off{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-  @media (max-width:900px){.about{grid-template-columns:1fr;gap:40px}}
+  .contact{background:var(--night);color:var(--night-text);padding:clamp(80px,10vw,140px) 0 48px}
+  .contact h2{color:var(--night-text);max-width:14ch}
+  .contact .lead{color:var(--night-muted);font-size:clamp(17px,1.4vw,20px);max-width:48ch;margin-top:24px}
+  .contact .cta{display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin-top:40px}
+  .who{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(24px,5vw,80px);margin-top:72px;padding-top:24px;border-top:1px solid #2E2E33}
+  .who b{display:block;font-family:var(--display);font-weight:500;font-size:19px;margin-bottom:6px}
+  .who span{color:var(--night-muted);font-size:15px;max-width:30ch;display:block}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:96px;font-size:14.5px;color:var(--night-muted)}
+  .foot nav{display:flex;gap:24px;flex-wrap:wrap}
+  .foot a:hover{color:var(--night-text)}
+  @media (max-width:800px){.who{grid-template-columns:1fr}}
 
-  .tests{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .test{border-radius:var(--r-xl);padding:44px 44px 40px;min-height:340px;display:flex;flex-direction:column;text-decoration:none;position:relative;overflow:hidden;transition:transform .4s var(--ease)}
-  .test:hover{transform:translateY(-6px)}
-  .test.a{background:var(--lavmilk)}
-  .test.b{background:var(--graphite);color:var(--cream)}
-  .test h3{font-family:'Cormorant Garamond';font-weight:500;font-size:clamp(34px,3.4vw,46px);line-height:1;margin:auto 0 14px;padding-top:50px}
-  .test.a h3 .it{color:var(--copper)} .test.b h3 .it{color:var(--caramel)}
-  .test p{font-size:15.5px;max-width:440px;color:var(--mocha)}
-  .test.b p{color:var(--foam)}
-  .test .go{margin-top:26px;display:flex;align-items:center;gap:12px;font-weight:500}
-  .test .arr{width:46px;height:46px;font-size:18px;background:var(--graphite);color:var(--cream)}
-  .test.b .arr{background:var(--caramel);color:var(--graphite)}
-  .test:hover .arr{transform:rotate(-45deg)}
-  @media (max-width:900px){.tests{grid-template-columns:1fr}}
-
-  .reqs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative}
-  .req{border-radius:var(--r-l);padding:32px;background:rgba(244,239,233,.05);border:1px solid rgba(179,154,174,.25);display:flex;flex-direction:column;transition:background .35s}
-  .req:hover{background:rgba(179,154,174,.12)}
-  .req h3{font-family:'Cormorant Garamond';font-weight:500;font-size:32px;line-height:1.05;margin:20px 0 12px}
-  .req p{font-size:15px;color:var(--foam);margin-bottom:26px}
-  .req .pill{margin-top:auto;align-self:flex-start}
-  .req .chip{align-self:flex-start}
-  .links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px;position:relative}
-  .links a{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-radius:var(--r-m);background:rgba(244,239,233,.07);text-decoration:none;transition:background .3s}
-  .links a:hover{background:rgba(224,166,115,.16)}
-  .links b{display:block;font-weight:500;font-size:16.5px}
-  .links small{font-family:'JetBrains Mono';font-size:12.5px;color:var(--lilac)}
-  .links .arr{background:rgba(244,239,233,.1)}
-  .links a:hover .arr{transform:rotate(-45deg)}
-  @media (max-width:900px){.reqs,.links{grid-template-columns:1fr}}
-
-  footer{padding:70px 0 40px;overflow:hidden}
-  .wordmark{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:clamp(46px,10.5vw,160px);line-height:.9;letter-spacing:-.03em;white-space:nowrap}
-  .wordmark span{color:var(--copper)}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid rgba(38,35,42,.12);font-size:13.5px;color:var(--mocha)}
-
-  .rv{opacity:0;transform:translateY(28px);filter:blur(6px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease)}
-  .rv.on{opacity:1;transform:none;filter:none}
-  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;filter:none;transition:none}.marq .track,.dot{animation:none}html{scroll-behavior:auto}}
+  @media (prefers-reduced-motion: no-preference){
+    .rv{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+    .rv.on{opacity:1;transform:none}
+  }
 </style>
 </head>
 <body>
 
-<nav class="nav" aria-label="Основное меню">
-  <a class="brand" href="#top"><span class="mono-mark">ТБ</span><b>Татьяна Бурдюгова</b></a>
-  <ul>
-    <li><a href="#topics">Темы</a></li>
-    <li><a href="#stage">Сцена</a></li>
-    <li><a href="#news">Новости</a></li>
-    <li><a href="#about">Обо мне</a></li>
-    <li><a href="#tests">Тесты</a></li>
-  </ul>
-  <a class="pill gr" href="#contact">Пригласить</a>
-</nav>
-
-<header class="hero" id="top">
-  <div class="aura a1"></div><div class="aura a2"></div>
-  <div class="wrap bento">
-    <div class="tile t-hero rv">
-      <div class="chips"><span class="chip l"><i class="dot"></i>Спикер</span><span class="chip l">ИИ</span><span class="chip l">Процессы</span><span class="chip l">Управление</span></div>
-      <svg class="steam" viewBox="0 0 220 120" fill="none" aria-hidden="true">
-        <path d="M30 96h70v8c0 12-12 16-35 16s-35-4-35-16z" stroke="#E3D0B4" stroke-width="2"/>
-        <path d="M100 99h7a8 8 0 0 1 0 16h-8" stroke="#E3D0B4" stroke-width="2"/>
-        <path d="M50 88c0-14 9-14 12-25s14-14 18-8 10-16 22-22 36-12 60-26" stroke="#E0A673" stroke-width="2.2" stroke-linecap="round"/>
-        <circle cx="80" cy="55" r="3.5" fill="#E0A673"/><circle cx="102" cy="33" r="3.5" fill="#E0A673"/><circle cx="162" cy="7" r="3.5" fill="#E0A673"/>
-      </svg>
-      <div>
-        <h1>Татьяна <span class="it">Бурдюгова</span></h1>
-        <p class="lead">Рассказываю, как <b>ИИ и цифровизация приживаются в реальном бизнесе</b>: в большой сервисной компании с тысячами сотрудников, а не в презентациях. Без восторгов и без страшилок, с цифрами и честными выводами.</p>
-        <div class="cta">
-          <a class="pill car" href="#contact">Пригласить выступить <span class="arr">→</span></a>
-          <a class="pill ol" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">Читать канал</a>
-        </div>
-      </div>
-    </div>
-    <div class="tile t-photo rv">
-      <img src="img/hero.jpg" alt="Татьяна Бурдюгова, портрет" width="724" height="1086" fetchpriority="high">
-      <div class="glass"><span class="it">между цифрой<br>и кофе</span><small>спикер CleanExpo<br>и CNews Forum</small></div>
-    </div>
-    <div class="tile t-fact rv"><div class="n">17<span>лет</span></div><p>строю системы в бизнесе: от таблиц 2009 года до ИИ</p></div>
-    <div class="tile t-fact lv rv"><div class="n">8<span>лет</span></div><p>собственного дела: холдинг из 13 юридических лиц</p></div>
-    <div class="tile t-fact rv"><div class="n">3000</div><p>человек в отраслевом сообществе, которое я вела: около 70% рынка</p></div>
-    <div class="tile t-fact lv rv"><div class="n">MBA</div><p>МГУ, сейчас. До этого два высших: менеджмент и право</p></div>
-    <div class="tile t-next rv">
-      <div class="date">18<small>НОЯБРЯ 2026</small></div>
-      <div>
-        <span class="chip d"><i class="dot"></i>Ближайшее выступление</span>
-        <h3>CleanExpo 2026: «ИИ наводит порядок. Эволюция инструмента в большой клининговой компании»</h3>
-        <p>Москва, «Крокус Экспо», павильон 1, зал G, 11:15. Бесплатный билет по промокоду <b>TG2026</b></p>
-      </div>
-      <a class="pill gr" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">Подробнее</a>
-    </div>
-    <a class="tile t-test rv" href="test-ai.html">
-      <span class="eyebrow">Тест · 3 минуты</span>
-      <h3>Насколько вы готовы работать с&nbsp;ИИ?</h3>
-      <span class="go">Пройти тест <span class="arr">→</span></span>
-    </a>
-  </div>
-  <div class="marq" aria-hidden="true">
-    <div class="track">
-      <span class="hl">CleanExpo 2026</span><span>CNews Forum</span><span>Общественная палата РФ</span><span>CleanExpo 2025</span><span>ГУУ</span><span>MBA МГУ</span>
-      <span class="hl">CleanExpo 2026</span><span>CNews Forum</span><span>Общественная палата РФ</span><span>CleanExpo 2025</span><span>ГУУ</span><span>MBA МГУ</span>
-    </div>
-  </div>
+<header class="wrap top">
+  <a class="nm" href="#">Татьяна Бурдюгова</a>
+  <nav aria-label="Разделы"><a href="#topics">Темы</a><a href="#stage">Сцена</a><a href="#about">Обо мне</a><a href="#news">Новости</a><a href="#tests">Тесты</a></nav>
+  <a class="btn" href="#contact">Пригласить</a>
 </header>
+
+<main>
+<section class="hero" style="padding:0" aria-label="Татьяна Бурдюгова">
+  <div class="l">
+    <h1>Татьяна <span>Бурдюгова</span></h1>
+    <p class="sub">Спикер и практик. Рассказываю, как ИИ на самом деле приживается в большом сервисном бизнесе.</p>
+    <div class="cta"><a class="btn" href="#contact">Пригласить</a><a class="lnk" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">Telegram-канал</a></div>
+    <div class="facts">
+      <div><b>17 лет</b><span>строю системы в бизнесе</span></div>
+      <div><b>CleanExpo</b><span>модератор и спикер</span></div>
+      <div><b>CNews Forum</b><span>спикер</span></div>
+    </div>
+  </div>
+  <div class="r"><img src="img/hero_stage.jpg" alt="Татьяна Бурдюгова модерирует сессию на CleanExpo" width="1677" height="1600" fetchpriority="high"></div>
+</section>
 
 <section id="topics">
   <div class="wrap">
-    <div class="shead rv">
-      <div><div class="eyebrow">О чём я говорю</div><h2>Три темы, где я <span class="it">практик</span>, а не теоретик</h2></div>
-      <p>Каждое выступление собираю под задачу площадки и аудитории: от отраслевой сцены до лекции для студентов.</p>
-    </div>
+    <h2 class="rv">О чём я говорю со сцены</h2>
     <div class="topics">
-      <article class="topic rv"><span class="num">01</span><h3>ИИ в реальном бизнесе</h3><p>Как ИИ на самом деле приживается в большой сервисной компании: где он честно забирает рутину, где помогает аналитику и где без человека по-прежнему никуда. Ответственность не автоматизируется.</p></article>
-      <article class="topic rv"><span class="num">02</span><h3>Сначала процесс, потом инструмент</h3><p>Почему автоматизация так часто не взлетает и как подготовить компанию к цифре. Программа ускоряет то, что уже есть: порядок или хаос.</p></article>
-      <article class="topic rv"><span class="num">03</span><h3>Новая экономика</h3><p>Сколько теперь стоит работа, если ИИ ускорил её в десять раз. Почему умирает оплата за часы, что дешевеет, что дорожает и почему главным навыком становится отбор.</p></article>
+      <article class="topic rv"><h3>ИИ в реальном бизнесе</h3><p>Где ИИ честно забирает рутину, где помогает аналитику и где без человека по-прежнему никуда. Ответственность не автоматизируется.</p></article>
+      <article class="topic rv"><h3>Сначала процесс, потом инструмент</h3><p>Почему автоматизация так часто не взлетает. Программа ускоряет то, что уже есть: порядок или хаос.</p></article>
+      <article class="topic rv"><h3>Новая экономика</h3><p>Сколько стоит работа, если ИИ ускорил её в десять раз. Почему умирает оплата за часы и что теперь дорожает.</p></article>
     </div>
-    <div class="formats rv"><span class="chip d">Доклад</span><span class="chip d">Модерация</span><span class="chip d">Панельная дискуссия</span><span class="chip d">Лекция для студентов и MBA</span><span class="chip d">Экспертный комментарий</span></div>
+    <p class="formats rv"><b>Форматы:</b> доклад, модерация, панельная дискуссия, лекция для студентов и MBA, экспертный комментарий.</p>
   </div>
 </section>
 
-<section id="stage" style="padding-top:0">
+<section id="stage" class="redblock">
   <div class="wrap">
-    <div class="panel on-dark">
-      <div class="aura"></div>
-      <div class="shead rv" style="position:relative">
-        <div><div class="eyebrow">Сцена</div><h2>Где я <span class="it">выступала</span></h2></div>
-        <p>Организаторы приглашают повторно: в анонсе CleanExpo 2026 я спикер CleanExpo 2025 и конференций CNews.</p>
-      </div>
-      <div class="stage">
-        <div class="ph rv"><img src="img/stage.jpg" alt="Татьяна Бурдюгова на сцене CNews Forum" width="1080" height="1180" loading="lazy"></div>
-        <ul class="tl rv">
-          <li class="soon"><div class="when">18 ноября 2026 · скоро</div><h3>CleanExpo 2026</h3><p>Доклад «ИИ наводит порядок: эволюция инструмента в большой клининговой компании».</p></li>
-          <li><div class="when">июнь 2026</div><h3>CNews Forum</h3><p>Доклад о цифровизации сервисного бизнеса: сначала процесс, потом инструмент.</p></li>
-          <li><div class="when">февраль 2026</div><h3>ГУУ</h3><p>Лекция для студентов: как на самом деле устроена операционка большой компании.</p></li>
-          <li><div class="when">ноябрь 2025</div><h3>CleanExpo 2025</h3><p>Модерация сессии «Автоматизация бизнес-процессов и ИИ в клининге» и доклад «Чистый код. Строим цифровой фундамент клининговой компании». Благодарность площадки.</p></li>
-          <li><div class="when">Общественная палата РФ</div><h3>Панельные дискуссии</h3><p>Обсуждение реформирования отрасли.</p></li>
-        </ul>
+    <h2 class="rv">Где я выступала</h2>
+    <div class="stage">
+      <ul class="tl rv">
+        <li><span class="when">18.11.2026</span><div><h3>CleanExpo 2026</h3><p>Доклад «ИИ наводит порядок: эволюция инструмента в большой клининговой компании». Москва, «Крокус Экспо», 11:15. Бесплатный билет по промокоду TG2026.</p></div></li>
+        <li><span class="when">Июнь 2026</span><div><h3>CNews Forum</h3><p>Доклад о цифровизации сервисного бизнеса: сначала процесс, потом инструмент.</p></div></li>
+        <li><span class="when">Февраль 2026</span><div><h3>ГУУ</h3><p>Лекция для студентов о том, как устроена операционка большой компании.</p></div></li>
+        <li><span class="when">Ноябрь 2025</span><div><h3>CleanExpo 2025</h3><p>Модерация сессии «Автоматизация бизнес-процессов и ИИ в клининге» и доклад «Чистый код». Благодарность площадки.</p></div></li>
+        <li><span class="when">ОП РФ</span><div><h3>Общественная палата</h3><p>Панельные дискуссии о реформировании отрасли.</p></div></li>
+      </ul>
+      <div class="shots rv">
+        <figure><div class="ph"><img src="img/award.jpg" alt="Благодарность Академии CleanExpo" width="1125" height="1500" loading="lazy" style="object-position:45% 30%"></div><figcaption>Благодарность Академии CleanExpo</figcaption></figure>
+        <figure><div class="ph"><img src="img/stage.jpg" alt="Доклад на CNews Forum" width="1080" height="1180" loading="lazy"></div><figcaption>Доклад на CNews Forum</figcaption></figure>
+        <figure><div class="ph"><img src="img/cnews.jpg" alt="Пресс-стена CNews Forum" width="960" height="1280" loading="lazy" style="object-position:center 22%"></div><figcaption>CNews Forum</figcaption></figure>
       </div>
     </div>
   </div>
 </section>
 
-<!-- НОВОСТИ: новые добавлять первыми -->
+<section id="about">
+  <div class="wrap about">
+    <div class="ph rv"><img src="img/portrait.jpg" alt="Татьяна Бурдюгова, портрет" width="724" height="1086" loading="lazy"></div>
+    <div class="rv">
+      <blockquote>«Я захожу в незнакомые сферы без правильного диплома и разбираюсь <span>быстрее</span>. Так устроен мой мозг».</blockquote>
+      <p>Первую систему я придумала в 2009 году, на первом месте работы: расчёт объёмов для управленческого учёта, ещё в таблицах. Дальше были финансы, запуск компании с нуля и внедрения учётных систем в разных отраслях.</p>
+      <p><b>Восемь лет у меня было собственное дело</b> в техническом осмотре: больше 26 пунктов, холдинг из 13 юридических лиц и отраслевой канал, который читали около 70% рынка.</p>
+      <p>Сейчас отвечаю за <b>стратегическое развитие сервисной компании</b> с тысячами сотрудников: процессы, цифровизация, внедрение ИИ. Учусь на MBA в МГУ.</p>
+      <p class="off">Вне работы: бег, вокал и гармонь, кофе каждое утро.</p>
+    </div>
+  </div>
+</section>
+
 <section id="news" style="padding-top:0">
   <div class="wrap">
-    <div class="shead rv">
-      <div><div class="eyebrow">Новости и медиа</div><h2>Выступления, анонсы, <span class="it">интервью</span></h2></div>
-      <p>Самое свежее и все разборы выходят в моём Telegram-канале «Между цифрой и кофе».</p>
-    </div>
+    <h2 class="rv">Новости</h2>
     <div class="news">
-      <a class="card rv" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">
-        <div class="meta"><span class="chip d">Анонс</span><span class="mono">21.09.2026</span></div>
+      <a class="feat rv" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/forum.jpg" alt="Татьяна Бурдюгова на форуме" width="1125" height="1500" loading="lazy"></div>
+        <div class="meta">21.09.2026, анонс</div>
         <h3>CleanExpo 2026 объявил меня спикером</h3>
-        <p>18 ноября расскажу, как ИИ приживается в большой сервисной компании: от протоколов встреч до прототипов, которые собираются за вечер.</p>
-        <div class="go">В канале <span class="arr">→</span></div>
+        <p>18 ноября расскажу, как ИИ приживается в большой сервисной компании: от протоколов встреч до прототипов.</p>
       </a>
-      <a class="card rv" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">
-        <div class="meta"><span class="chip d">Видео</span><span class="mono">17.08.2026</span></div>
-        <h3>Полный доклад с CNews Forum</h3>
-        <p>Почему автоматизация поверх сломанного процесса его не чинит, а ускоряет то, что работало плохо. Запись выступления целиком.</p>
-        <div class="go">Смотреть <span class="arr">→</span></div>
-      </a>
-      <a class="card rv" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">
-        <div class="meta"><span class="chip d">Колонка</span><span class="mono">2026</span></div>
-        <h3>Сколько теперь стоит ИТ-проект</h3>
-        <p>Если работа ускорилась в десять раз, оплата за часы обесценивает исполнителя. Цена равна ценности результата плюс ответственности за него.</p>
-        <div class="go">Читать <span class="arr">→</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="about" style="padding-top:0">
-  <div class="wrap about">
-    <div class="ph rv"><img src="img/about.jpg" alt="Татьяна Бурдюгова" width="724" height="1086" loading="lazy"></div>
-    <div class="rv">
-      <div class="eyebrow">Обо мне</div>
-      <blockquote>Я захожу в незнакомые сферы без «правильного» диплома и разбираюсь <span>быстрее</span>. Так устроен мой мозг.</blockquote>
-      <p>Свою первую систему я придумала в 2009 году, на первом месте работы: расчёт объёмов для управленческого учёта, ещё в таблицах. На третьем курсе, без экономического образования, собрала тарифную сетку окладов и объясняла цифры финансовому директору. Дальше были финансы, запуск компании с нуля и внедрения учётных систем в разных отраслях.</p>
-      <p><b>Восемь лет у меня было собственное дело</b> в сфере технического осмотра: больше 26 пунктов, холдинг из 13 юридических лиц, больше 1500 услуг операторам рынка и отраслевой канал, который читали около 70% рынка.</p>
-      <p>Сейчас отвечаю за <b>стратегическое развитие сервисной компании</b> с тысячами сотрудников и объектов: процессы, цифровизация, внедрение ИИ. Учусь на MBA в МГУ.</p>
-      <div class="off"><span class="chip d">5 км за 29 минут</span><span class="chip d">Вокал и гармонь</span><span class="chip d">Кофе каждое утро</span></div>
+      <div class="side">
+        <a class="rv" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener"><div class="meta">17.08.2026, видео</div><h3>Полный доклад с CNews Forum</h3><p>Почему автоматизация поверх сломанного процесса ускоряет то, что работало плохо.</p></a>
+        <a class="rv" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener"><div class="meta">2026, колонка</div><h3>Сколько теперь стоит ИТ-проект</h3><p>Цена равна ценности результата плюс ответственности за него. Часы в этой формуле не участвуют.</p></a>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="tests" style="padding-top:0">
   <div class="wrap">
-    <div class="shead rv">
-      <div><div class="eyebrow">Проверьте себя</div><h2>Два теста на <span class="it">три минуты</span></h2></div>
-      <p>Без почты и регистраций: ответы никуда не отправляются, результат считается прямо на странице.</p>
-    </div>
+    <h2 class="rv">Проверьте себя за три минуты</h2>
     <div class="tests">
-      <a class="test a rv" href="test-ai.html">
-        <span class="eyebrow">Для себя · 10 вопросов</span>
-        <h3>Насколько вы готовы работать <span class="it">с&nbsp;ИИ</span>?</h3>
-        <p>Не про нейросети, а про мышление: как вы ставите задачу, проверяете результат и распоряжаетесь сэкономленным временем.</p>
-        <span class="go"><span class="arr">→</span> Пройти тест</span>
-      </a>
-      <a class="test b rv" href="test-biz.html">
-        <span class="eyebrow" style="color:var(--lilac)">Для компании · 10 вопросов</span>
-        <h3>Насколько ваша компания живёт <span class="it">в цифре</span>?</h3>
-        <p>Как в вашем бизнесе устроены деньги, процессы и решения: в системе или в блокноте.</p>
-        <span class="go"><span class="arr">→</span> Пройти тест</span>
-      </a>
+      <a class="test a rv" href="test-ai.html"><h3>Насколько вы готовы работать с&nbsp;ИИ?</h3><p>Десять вопросов о мышлении: как вы ставите задачу, проверяете результат и тратите сэкономленное время.</p><span class="go">Пройти тест <span>→</span></span></a>
+      <a class="test b rv" href="test-biz.html"><h3>Насколько ваша компания живёт в цифре?</h3><p>Деньги, процессы и решения: в системе или в блокноте.</p><span class="go">Пройти тест <span>→</span></span></a>
     </div>
   </div>
 </section>
+</main>
 
-<section id="contact" style="padding-top:0">
+<footer id="contact" class="contact">
   <div class="wrap">
-    <div class="panel on-dark">
-      <div class="aura" style="background:var(--caramel);opacity:.18;left:-160px;right:auto;top:auto;bottom:-200px"></div>
-      <div class="shead rv" style="position:relative">
-        <div><div class="eyebrow">Сотрудничество</div><h2>Давайте <span class="it">поговорим</span></h2></div>
-        <p>Отвечаю лично. Напишите, о каком событии или материале идёт речь, и удобные сроки.</p>
-      </div>
-      <div class="reqs">
-        <div class="req rv"><span class="chip l">Организаторам</span><h3>Выступление или модерация</h3><p>Доклад, модерация сессии или панельная дискуссия про ИИ, процессы и управление в реальном бизнесе.</p><a class="pill car" href="https://t.me/Tatyana_Burdyugova" target="_blank" rel="noopener">Пригласить <span class="arr">→</span></a></div>
-        <div class="req rv"><span class="chip l">Журналистам</span><h3>Комментарий или интервью</h3><p>Экспертный комментарий о внедрении ИИ, цифровизации и новой экономике труда. Быстро и по существу.</p><a class="pill ol" href="https://t.me/Tatyana_Burdyugova" target="_blank" rel="noopener">Запросить</a></div>
-        <div class="req rv"><span class="chip l">Вузам и бизнес-школам</span><h3>Лекция или гостевое занятие</h3><p>Как устроена операционка большой компании и как в ней на самом деле работает ИИ: кейсы вместо теории.</p><a class="pill ol" href="https://t.me/Tatyana_Burdyugova" target="_blank" rel="noopener">Обсудить</a></div>
-      </div>
-      <div class="links rv">
-        <a href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener"><span><b>Telegram-канал</b><small>@tatyana_and_coffee</small></span><span class="arr">→</span></a>
-        <a href="https://instagram.com/tatyana_burdyugova" target="_blank" rel="noopener"><span><b>Instagram</b><small>@tatyana_burdyugova</small></span><span class="arr">→</span></a>
-        <a href="https://t.me/Tatyana_Burdyugova" target="_blank" rel="noopener"><span><b>Написать лично</b><small>@Tatyana_Burdyugova</small></span><span class="arr">→</span></a>
-      </div>
+    <h2 class="rv">Выступление, комментарий, лекция</h2>
+    <p class="lead rv">Отвечаю лично. Напишите, о каком событии идёт речь, и удобные сроки.</p>
+    <div class="cta rv"><a class="btn" href="https://t.me/Tatyana_Burdyugova" target="_blank" rel="noopener">Пригласить</a><a class="lnk" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">Telegram-канал</a></div>
+    <div class="who rv">
+      <div><b>Организаторам</b><span>Доклад, модерация или панельная дискуссия.</span></div>
+      <div><b>Журналистам</b><span>Комментарий об ИИ и цифровизации, быстро и по существу.</span></div>
+      <div><b>Вузам</b><span>Лекция или гостевое занятие: кейсы вместо теории.</span></div>
     </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="wordmark">между цифрой <span>и кофе</span></div>
-    <div class="foot"><span>© 2026 Татьяна Бурдюгова</span><span class="mono">tatyanaburdyugova.com</span></div>
+    <div class="foot"><span>© 2026 Татьяна Бурдюгова</span><nav><a href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">Telegram</a><a href="https://instagram.com/tatyana_burdyugova" target="_blank" rel="noopener">Instagram</a><a href="https://t.me/Tatyana_Burdyugova" target="_blank" rel="noopener">Написать лично</a></nav></div>
   </div>
 </footer>
 
 <script>
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .1 });
-  document.querySelectorAll('.rv').forEach((el, i) => { if (el.closest('.bento')) el.style.transitionDelay = (i % 8) * 70 + 'ms'; io.observe(el); });
+  if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .12 });
+    document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  }
 </script>
 </body>
 </html>
