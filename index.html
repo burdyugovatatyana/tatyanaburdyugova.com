@@ -6,7 +6,7 @@
 <title>Татьяна Бурдюгова · спикер: ИИ и управление в реальном бизнесе</title>
 <meta name="description" content="Татьяна Бурдюгова: спикер и практик. Как ИИ и цифровизация приживаются в большом сервисном бизнесе. Выступления, лекции, комментарии для СМИ.">
 <meta property="og:title" content="Татьяна Бурдюгова · ИИ и управление в реальном бизнесе">
-<meta property="og:description" content="Спикер и практик: как ИИ приживается в реальной работе большой компании.">
+<meta property="og:description" content="Говорю только о том, что внедряю сама: ИИ и цифровизация в большом сервисном бизнесе.">
 <meta property="og:image" content="https://tatyanaburdyugova.com/img/hero_stage.jpg">
 <meta property="og:url" content="https://tatyanaburdyugova.com/">
 <meta property="og:type" content="profile">
@@ -68,13 +68,12 @@
 
   .hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);min-height:calc(100dvh - 72px);max-height:960px}
   .hero .l{padding:4vh 40px 40px max(20px, calc((100vw - 1280px)/2));display:flex;flex-direction:column}
+  .hero .l{justify-content:flex-end;padding-bottom:64px !important}
   .hero h1{font-weight:800;font-size:clamp(40px,5.8vw,96px);line-height:.98;letter-spacing:-.04em;text-transform:uppercase;margin-top:auto}
   .hero h1 span{color:var(--red);display:block}
-  .hero .sub{font-size:clamp(18px,1.5vw,22px);line-height:1.45;max-width:30ch;margin-top:30px}
+  .hero .sub{font-size:clamp(19px,1.6vw,24px);line-height:1.4;max-width:36ch;margin-top:30px}
+  .hero .sub b{font-weight:600;color:var(--ink);display:block}
   .hero .cta{display:flex;gap:28px;align-items:center;margin-top:34px;flex-wrap:wrap}
-  .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(24px,4vw,64px);margin-top:auto;padding-top:22px;border-top:2px solid var(--ink)}
-  .facts b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(22px,2.2vw,32px);letter-spacing:-.03em;line-height:1.1}
-  .facts span{font-size:14px;color:var(--muted)}
   .hero .r{position:relative;overflow:hidden;background:#1b2b4b}
   .hero .r img{width:100%;height:100%;object-fit:cover;object-position:58% 30%}
   @media (max-width:960px){
@@ -82,10 +81,43 @@
     .hero .r{order:-1;height:62vh}
     .hero .l{padding:36px 20px 40px}
     .hero h1{margin-top:0}
-    .facts{grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:40px}
   }
 
   section{padding:clamp(80px,10vw,140px) 0}
+
+  .proof{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .proof .wrap>div{padding:26px 24px 28px 0}
+  .proof .wrap>div+div{padding-left:24px;border-left:1px solid var(--rule)}
+  .proof b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(20px,1.9vw,28px);letter-spacing:-.03em;line-height:1.15}
+  .proof span{font-size:14.5px;color:var(--muted)}
+  @media (max-width:860px){.proof .wrap{grid-template-columns:1fr 1fr}.proof .wrap>div:nth-child(3){padding-left:0;border-left:0}.proof .wrap>div{border-top:1px solid var(--rule)}}
+
+  .vid{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .vid h2{max-width:none}
+  .vid p{color:var(--muted);max-width:52ch;margin-top:18px}
+  .player{margin-top:40px;width:min(380px,100%);background:#000}
+  .player video{display:block;width:100%;height:auto;aspect-ratio:9/16}
+
+  /* медиакит */
+  .press{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,96px);margin-top:56px;align-items:start}
+  .bio{border-top:2px solid var(--ink);padding:24px 0 34px}
+  .bio .hd{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:14px}
+  .bio h3{font-size:20px}
+  .bio .hd small{color:var(--muted);font-size:14px}
+  .bio p{max-width:62ch}
+  .copy{margin-top:16px;background:none;border:2px solid var(--ink);color:var(--ink);font:600 15px var(--text);padding:11px 20px;cursor:pointer;transition:background .2s,color .2s}
+  .copy:hover{background:var(--ink);color:var(--paper)}
+  .copy.ok{background:var(--red);border-color:var(--red);color:#fff}
+  .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .pics a{display:block}
+  .pics .ph{overflow:hidden;aspect-ratio:4/5}
+  .pics img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+  .pics a:hover img{transform:scale(1.03)}
+  .pics span{display:block;font-size:14px;margin-top:8px;font-weight:500}
+  .pics span em{font-style:normal;color:var(--red)}
+  .press-note{margin-top:18px;color:var(--muted);font-size:14.5px}
+  @media (max-width:900px){.press{grid-template-columns:1fr}}
 
   .topics{margin-top:56px}
   .topic{display:grid;grid-template-columns:5fr 6fr;gap:40px;padding:34px 0 40px;border-top:2px solid var(--ink)}
@@ -172,7 +204,7 @@
 
 <header class="wrap top">
   <a class="nm" href="#">Татьяна Бурдюгова</a>
-  <nav aria-label="Разделы"><a href="#topics">Темы</a><a href="#stage">Сцена</a><a href="#about">Обо мне</a><a href="#news">Новости</a><a href="#tests">Тесты</a></nav>
+  <nav aria-label="Разделы"><a href="#topics">Темы</a><a href="#stage">Сцена</a><a href="#about">Обо мне</a><a href="#news">Новости</a><a href="#press">Медиакит</a></nav>
   <a class="btn" href="#contact">Пригласить</a>
 </header>
 
@@ -180,16 +212,20 @@
 <section class="hero" style="padding:0" aria-label="Татьяна Бурдюгова">
   <div class="l">
     <h1>Татьяна <span>Бурдюгова</span></h1>
-    <p class="sub">Спикер и практик. Рассказываю, как ИИ на самом деле приживается в большом сервисном бизнесе.</p>
+    <p class="sub"><b>Говорю только о том, что внедряю сама:</b> ИИ и цифровизация в большом сервисном бизнесе.</p>
     <div class="cta"><a class="btn" href="#contact">Пригласить</a><a class="lnk" href="https://t.me/tatyana_and_coffee" target="_blank" rel="noopener">Telegram-канал</a></div>
-    <div class="facts">
-      <div><b>17 лет</b><span>строю системы в бизнесе</span></div>
-      <div><b>CleanExpo</b><span>модератор и спикер</span></div>
-      <div><b>CNews Forum</b><span>спикер</span></div>
-    </div>
   </div>
   <div class="r"><img src="img/hero_stage.jpg" alt="Татьяна Бурдюгова модерирует сессию на CleanExpo" width="1677" height="1600" fetchpriority="high"></div>
 </section>
+
+<div class="proof">
+  <div class="wrap">
+    <div><b>17 лет</b><span>строю системы в бизнесе, с 2009 года</span></div>
+    <div><b>Тысячи</b><span>сотрудников в компании, где я внедряю ИИ</span></div>
+    <div><b>CleanExpo, CNews</b><span>спикер и модератор</span></div>
+    <div><b>MBA МГУ</b><span>учусь сейчас</span></div>
+  </div>
+</div>
 
 <section id="topics">
   <div class="wrap">
@@ -223,11 +259,19 @@
   </div>
 </section>
 
-<section id="about">
+<section id="video">
+  <div class="wrap vid">
+    <h2 class="rv">Полторы минуты со сцены</h2>
+    <p class="rv">Фрагмент доклада на CNews Forum: почему уборка только кажется простой и почему сначала процесс, потом инструмент.</p>
+    <div class="player rv"><video controls preload="none" playsinline poster="video/cnews_poster.jpg" width="720" height="1280"><source src="video/cnews_fragment.mp4" type="video/mp4"></video></div>
+  </div>
+</section>
+
+<section id="about" style="padding-top:0">
   <div class="wrap about">
     <div class="ph rv"><img src="img/portrait.jpg" alt="Татьяна Бурдюгова, портрет" width="724" height="1086" loading="lazy"></div>
     <div class="rv">
-      <blockquote>«Я захожу в незнакомые сферы без правильного диплома и разбираюсь <span>быстрее</span>. Так устроен мой мозг».</blockquote>
+      <blockquote>«Я захожу в незнакомые сферы без правильного диплома и разбираюсь <span>быстрее</span> тех, у кого он есть».</blockquote>
       <p>Первую систему я придумала в 2009 году, на первом месте работы: расчёт объёмов для управленческого учёта, ещё в таблицах. Дальше были финансы, запуск компании с нуля и внедрения учётных систем в разных отраслях.</p>
       <p><b>Восемь лет у меня было собственное дело</b> в техническом осмотре: больше 26 пунктов, холдинг из 13 юридических лиц и отраслевой канал, который читали около 70% рынка.</p>
       <p>Сейчас отвечаю за <b>стратегическое развитие сервисной компании</b> с тысячами сотрудников: процессы, цифровизация, внедрение ИИ. Учусь на MBA в МГУ.</p>
@@ -263,6 +307,34 @@
     </div>
   </div>
 </section>
+<section id="press" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="rv">Для организаторов и журналистов</h2>
+    <div class="press">
+      <div>
+        <div class="bio rv">
+          <div class="hd"><h3>Коротко, для афиши</h3><small>около 40 слов</small></div>
+          <p id="bio-short">Татьяна Бурдюгова, практик внедрения ИИ и цифровизации в большом сервисном бизнесе. Отвечает за стратегическое развитие компании с тысячами сотрудников. Спикер CleanExpo и CNews Forum. Строит системы в бизнесе с 2009 года, учится на MBA в МГУ.</p>
+          <button class="copy" data-copy="bio-short">Скопировать</button>
+        </div>
+        <div class="bio rv">
+          <div class="hd"><h3>Подробно, для статьи</h3><small>около 90 слов</small></div>
+          <p id="bio-long">Татьяна Бурдюгова строит системы в бизнесе с 2009 года: от управленческого учёта в таблицах до внедрения ИИ. Работала в финансах, запускала компанию с нуля, вела проекты внедрения учётных систем в разных отраслях. Восемь лет руководила собственным холдингом из 13 компаний в сфере технического осмотра и вела отраслевое сообщество, которое объединяло около 70% рынка. Сейчас отвечает за стратегическое развитие сервисной компании с тысячами сотрудников: процессы, цифровизация, внедрение ИИ. Спикер CleanExpo 2025 и 2026, CNews Forum, участник дискуссий в Общественной палате РФ, читает лекции для студентов. Два высших образования, учится на MBA в МГУ.</p>
+          <button class="copy" data-copy="bio-long">Скопировать</button>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="pics">
+          <a href="press/burdyugova_stage_cleanexpo.jpg" download><div class="ph"><img src="img/hero_stage.jpg" alt="Татьяна Бурдюгова на сцене CleanExpo" loading="lazy" style="object-position:58% 30%"></div><span>На сцене CleanExpo <em>скачать</em></span></a>
+          <a href="press/burdyugova_portrait.jpg" download><div class="ph"><img src="img/portrait.jpg" alt="Татьяна Бурдюгова, студийный портрет" loading="lazy" style="object-position:center 15%"></div><span>Студийный портрет <em>скачать</em></span></a>
+          <a href="press/burdyugova_award_cleanexpo.jpg" download><div class="ph"><img src="img/award.jpg" alt="Татьяна Бурдюгова с благодарностью CleanExpo" loading="lazy" style="object-position:45% 30%"></div><span>Академия CleanExpo <em>скачать</em></span></a>
+          <a href="press/burdyugova_forum.jpg" download><div class="ph"><img src="img/forum.jpg" alt="Татьяна Бурдюгова на форуме" loading="lazy" style="object-position:center 20%"></div><span>На форуме <em>скачать</em></span></a>
+        </div>
+        <p class="press-note">Фото можно использовать в анонсах и публикациях с указанием имени.</p>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer id="contact" class="contact">
@@ -280,6 +352,11 @@
 </footer>
 
 <script>
+  document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {
+    const t = document.getElementById(b.dataset.copy).innerText;
+    try { await navigator.clipboard.writeText(t); } catch (e) { const r = document.createRange(); r.selectNodeContents(document.getElementById(b.dataset.copy)); getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy'); }
+    b.textContent = 'Скопировано'; b.classList.add('ok'); setTimeout(() => { b.textContent = 'Скопировать'; b.classList.remove('ok'); }, 2000);
+  }));
   if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .12 });
     document.querySelectorAll('.rv').forEach(el => io.observe(el));
